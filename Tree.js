@@ -9,6 +9,8 @@ class Tree {
   }
 
   depthFirstSearch(name){
+    if(this.root.name === name) return this.root;
+
     let stack = [...this.root.children];
 
     let ops = 0
@@ -25,6 +27,7 @@ class Tree {
   }
 
   breadthFirstSearch(name){
+    if(this.root.name === name) return this.root;
     let queue = [...this.root.children];
     let count = 0;
 
@@ -51,14 +54,14 @@ zuza.addChildren([dawa, riley]);
 rachna.addChild(mien);
 
 // ROOT NODE CHILDREN
-morgan.addChildren([taylor, zuza, racha]);
+morgan.addChildren([taylor, zuza, rachna]);
 
 // ROOT NODE
 const tree = new Tree(morgan);
 
 console.log(tree);
-// console.log(tree.depthFirstSearch("taylor"));
-// console.log(tree.breadthFirstSearch("taylor"));
-// console.log('\n-----------------------------------------\n');
-// console.log(tree.depthFirstSearch("riley"));
-// console.log(tree.breadthFirstSearch("riley"));
+console.log(tree.depthFirstSearch("taylor"));
+console.log(tree.breadthFirstSearch("taylor"));
+console.log('\n-----------------------------------------\n');
+console.log(tree.depthFirstSearch("riley"));
+console.log(tree.breadthFirstSearch("riley"));

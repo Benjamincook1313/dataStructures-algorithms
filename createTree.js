@@ -8,7 +8,7 @@ for(let person of people){
   nodes[person] = new Node(person);
 }
 
-const { morgan, taylor, zuza, rachna, kyo, dawa, riley, mien, seamus, harlow, les, endi, isi } = nodes;
+// const { morgan, taylor, zuza, rachna, kyo, dawa, riley, mien, seamus, harlow, les, endi, isi } = nodes;
 
 
 console.log(nodes);
